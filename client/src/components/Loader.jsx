@@ -5,7 +5,7 @@ function Loader() {
     return (
         <div >
          <div style={{display:'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', marginTop: '2rem'}}>
-         Loading your virtual window....
+         Loading your virtual window....Working on safari compatability
             <Audio
                 height="80"
                 width="80"

@@ -32,6 +32,7 @@ function App(){
     const responseData = await response.json() 
     if (lat && long) {
       setData(responseData)
+      setWeather(responseData.main.temp)
       let timezone = responseData.timezone
     let sunrise = responseData.sys.sunrise
     let sunset = responseData.sys.sunset
@@ -55,9 +56,9 @@ function App(){
     const timerId =  setInterval(refreshClock, 5000);
     getCoordinates()
       if(weather === 0) {  
-          getData(lat, long)
+          
         setTimeout(() => {
-          setWeather(data.main.temp)
+          getData(lat, long)
         }, 3000);
           // return;
       } else  {
