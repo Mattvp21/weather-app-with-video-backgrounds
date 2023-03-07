@@ -28,7 +28,7 @@ function App(){
 
   async function getData(lat, long) {
   
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&appid=${API_KEY}`)
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&appid=${apiKey}`)
     const responseData = await response.json() 
     if (lat && long) {
       setData(responseData)
