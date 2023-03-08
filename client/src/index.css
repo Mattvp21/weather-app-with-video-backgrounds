@@ -72,7 +72,7 @@ button {
   align-items: center;
   animation: moveUp ease-in .5s;
   padding: .5rem;
- 
+  
 }
 
 .content {
@@ -131,3 +131,4 @@ button {
     opacity: 1;
   }
 }
+

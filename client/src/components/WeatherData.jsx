@@ -1,9 +1,9 @@
 import React from 'react';
 
 
-function WeatherData({weatherData}) {
+function WeatherData({weatherData, open}) {
     return (
-        <div className='weather-data'>
+        <div className='weather-data' style={{visibility: open ? 'visible' : 'hidden'}}>
         
             <h1 className='weather-data__heading'>Weather Data for {weatherData.name}</h1>
            
