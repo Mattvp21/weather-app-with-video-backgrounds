@@ -12,11 +12,11 @@ function App(){
   const [backgroundImage, setBackgroundImage] = useState('')
   const [sunrise, setSunrise] = useState(0) 
   const [sunset, setSunset] = useState(0) 
-  const [militaryHour, setMilitaryHour] = useState(String(date).substring(16,21))
+  const [militaryHour, setMilitaryHour] = useState('')
   
   function refreshClock() {
     setDate(new Date());
-    setMilitaryHour(String(date).substring(16,21))
+    setMilitaryHour(String(new Date()).substring(16,21))
   }
  function getCoordinates() {
   navigator.geolocation.getCurrentPosition(function(position) {
