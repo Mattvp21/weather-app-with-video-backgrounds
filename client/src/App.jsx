@@ -99,7 +99,7 @@ function App(){
         setBackgroundImage('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b3be1dae-3caa-4d45-be6c-3de586ba95e2/dehq31u-e1508667-c715-41fc-b43f-2f2829e70ad5.jpg/v1/fill/w_1192,h_670,q_70,strp/rail_gate_by_bisbiswas_dehq31u-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcL2IzYmUxZGFlLTNjYWEtNGQ0NS1iZTZjLTNkZTU4NmJhOTVlMlwvZGVocTMxdS1lMTUwODY2Ny1jNzE1LTQxZmMtYjQzZi0yZjI4MjllNzBhZDUuanBnIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.FY7LtKKeDUXhWxY94HTVxCQsI7HNWLSGrfBffB3l-uE')
       }
       if(timeOfDay === 'night' && data.weather[0].main === 'Thunderstorm') {
-        setBackgroundImage('../public/thunderstorm-1768742.jpg')
+        setBackgroundImage('/thunderstorm-1768742.jpg')
       }
       if(timeOfDay === 'night' && data.weather[0].main === 'Snow') {
         setBackgroundImage('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fb506bfd-7fc9-4673-89a3-6b38d8e0a331/dandonb-51bbf3c0-296a-4a0d-81b0-a3c9acfcf8dd.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2ZiNTA2YmZkLTdmYzktNDY3My04OWEzLTZiMzhkOGUwYTMzMVwvZGFuZG9uYi01MWJiZjNjMC0yOTZhLTRhMGQtODFiMC1hM2M5YWNmY2Y4ZGQuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.iVfcphhUUGHiePW0VIZLaO84R0hC8jRKpJSmp-ObO7o')
