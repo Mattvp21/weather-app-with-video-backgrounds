@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import moment from 'moment'
 import Loader from './components/Loader';
+import WeatherData from './components/WeatherData';
 function App(){
   const apiKey = import.meta.env.VITE_API_KEY
   const[data,setData] = useState({})
@@ -13,6 +14,7 @@ function App(){
   const [sunrise, setSunrise] = useState(0) 
   const [sunset, setSunset] = useState(0) 
   const [militaryHour, setMilitaryHour] = useState('')
+  const [quoteData, setQuoteData] = useState()
   
   function refreshClock() {
     setDate(new Date());
@@ -42,16 +44,8 @@ function App(){
     setSunrise(String(x).substring(0,5))
     setSunset(String(y).substring(0,5))
     } 
-    
-  
-  
-    
-
-  
-    
-    
- 
 }
+
   useEffect( () => {
     
     const timerId =  setInterval(refreshClock, 5000);
@@ -111,14 +105,39 @@ function App(){
       }
     
   }, [getData, weather, backgroundImage, timeOfDay]);
+
+ async function handleClick() {
+  const apiUrl = 'https://api.adviceslip.com/advice'
+    try {
+      const response = await fetch(apiUrl)
+      let data = await response.json()
+      setQuoteData(data)
+      setTimeout(() => {
+        setQuoteData()
+      }, 3000);
+  } catch (error) {
+     console.log(error) 
+  }
+  }
   
   return timeOfDay === '' ? (<Loader/>) : (
       <div id={timeOfDay} className='App'>
       <main style={{background:`url(${backgroundImage})`}} >
+      
+        {
+          quoteData ? (
+            <div className='quote-data'>
+              <p>{quoteData.slip.advice}</p>
+            </div>
+          ) : <WeatherData weatherData={data} />
+        }
+      
       <footer className='bottom-display'>
       <p className='time'>
       {date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
       </p>
+      <button onClick={handleClick} type='button'>Get advice</button>
+      
       <p className='weather'>
       {weather}F
       </p>

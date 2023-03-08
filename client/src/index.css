@@ -20,23 +20,114 @@ html {
 
 main {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-repeat: no-repeat !important;
   background-size: cover !important;
 }
 
+button {
+  background-color: transparent;
+  border-color: white;
+  border-radius: 10px;
+  color: white;
+  font-family: inherit;
+  font-size: .35em;
+  padding: .1rem;
+}
+
 .bottom-display {
   display: flex;
-  justify-content: space-between;
-  padding: .5rem;
- transform: translateY(5rem);
+  justify-content: space-around;
+  width: 100%;
+  margin-top: auto;
   color: white;
   
 }
 
+.quote-data {
+  display: flex;
+  font-size: .35rem;
+  color: white;
+  margin-top: auto;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  animation: moveUp ease-in .5s;
+}
+
+.weather-data {
+  border: solid 1px white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  font-size: .25rem;
+  font-weight: 100;
+  color: white;
+  margin-top: auto;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  animation: moveUp ease-in .5s;
+  padding: .5rem;
+ 
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: .25rem;
+  font-size: .75em;
+}
+
+.content-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: .25rem;
+}
+
+.content-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 @media (max-width: 650px) {
   .bottom-display {
-    transform: translateY(7rem);
-    font-size:50%
+   
+    font-size:40%
+  }
+  .button {
+    font-size: .25em;
+  }
+
+  .weather-data {
+    width: 75%;
+    font-size: .18em;
+  }
+
+  .content {
+    width: 75%;
   }
 }
 
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  50% {
+    opacity: .5;
+    transform: translateY(.5rem);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
