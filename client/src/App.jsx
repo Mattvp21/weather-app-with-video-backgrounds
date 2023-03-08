@@ -17,6 +17,7 @@ function App(){
   function refreshClock() {
     setDate(new Date());
     setMilitaryHour(String(new Date()).substring(16,21))
+    
   }
  function getCoordinates() {
   navigator.geolocation.getCurrentPosition(function(position) {
@@ -74,19 +75,19 @@ function App(){
         setBackgroundImage('/mountain-5678172_1920.jpg')
       }
       if(timeOfDay === 'day' && data.weather[0].main === 'Fog') {
-        setBackgroundImage('../public/hills-615429_1920.jpg')
+        setBackgroundImage('/hills-615429_1920.jpg')
       }
       if(timeOfDay === 'day' && data.weather[0].main === 'Snow') {
         setBackgroundImage('/mountain-5678172_1920.jpg')
       }
       if(timeOfDay === 'day' && data.weather[0].main === 'Clear') {
-       setBackgroundImage('../public/tree-2916763_1920.jpg')
+       setBackgroundImage('/tree-2916763_1920.jpg')
       }
       if(timeOfDay === 'day' && data.weather[0].main === 'Mist') {
-        setBackgroundImage('halloween-770.gif')
+        setBackgroundImage('/halloween-770.gif')
       }
       if(timeOfDay === 'day' && data.weather[0].main === 'Rain') {
-        setBackgroundImage('../public/rain-4194.gif')
+        setBackgroundImage('/rain-4194.gif')
       }
       if(timeOfDay === 'night' && data.weather[0].main === 'Clear') {
         setBackgroundImage('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0c2b4cc2-d07d-4fbd-b02e-2080981b29a1/d9brh0e-222e4a89-b0bf-46c6-be81-7c399828e98d.jpg/v1/fill/w_1134,h_705,q_70,strp/dying_star_by_t1na_d9brh0e-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Nzk2IiwicGF0aCI6IlwvZlwvMGMyYjRjYzItZDA3ZC00ZmJkLWIwMmUtMjA4MDk4MWIyOWExXC9kOWJyaDBlLTIyMmU0YTg5LWIwYmYtNDZjNi1iZTgxLTdjMzk5ODI4ZTk4ZC5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.2SDPPxeMZkyaowDx_-VWo2JakIucK1Me3K2DJ9ka8jk')
