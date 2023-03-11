@@ -108,6 +108,9 @@ function App(){
       if(timeOfDay === 'night' && data.weather[0].main === 'Thunderstorm') {
         setBackgroundImage('/thunderstorm-1768742.jpg')
       }
+      if(timeOfDay === 'night' && data.weather[0].main === 'Rain') {
+        setBackgroundImage('/rain-4194.gif')
+      }
       if(timeOfDay === 'night' && data.weather[0].main === 'Snow') {
         setBackgroundImage('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fb506bfd-7fc9-4673-89a3-6b38d8e0a331/dandonb-51bbf3c0-296a-4a0d-81b0-a3c9acfcf8dd.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2ZiNTA2YmZkLTdmYzktNDY3My04OWEzLTZiMzhkOGUwYTMzMVwvZGFuZG9uYi01MWJiZjNjMC0yOTZhLTRhMGQtODFiMC1hM2M5YWNmY2Y4ZGQuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.iVfcphhUUGHiePW0VIZLaO84R0hC8jRKpJSmp-ObO7o')
       }
