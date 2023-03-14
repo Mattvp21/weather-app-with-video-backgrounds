@@ -85,7 +85,7 @@ function App(){
         setBackgroundImage('/hills-615429_1920.jpg')
       }
       if(timeOfDay === 'day' && data.weather[0].main === 'Snow') {
-        setBackgroundImage('/mountain-5678172_1920.jpg')
+        setBackgroundImage('/snow-682.gif')
       }
       if(timeOfDay === 'day' && data.weather[0].main === 'Clear') {
        setBackgroundImage('/tree-2916763_1920.jpg')
